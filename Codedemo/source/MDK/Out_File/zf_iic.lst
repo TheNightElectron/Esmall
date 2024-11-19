@@ -1,0 +1,18 @@
+C251 COMPILER V5.60.0,  zf_iic                                                             10/11/23  14:10:27  PAGE 1   
+
+
+C251 COMPILER V5.60.0, COMPILATION OF MODULE zf_iic
+OBJECT MODULE PLACED IN .\Out_File\zf_iic.obj
+COMPILER INVOKED BY: F:\keil\C251\BIN\C251.EXE ..\..\Libraries\seekfree_libraries\zf_iic.c XSMALL INTR2 WARNINGLEVEL(3) 
+                    -BROWSE INCDIR(..\..\Libraries\libraries;..\..\Libraries\seekfree_libraries;..\..\Libraries\seekfree_peripheral;..\CODE;.
+                    -.\USER\inc;..\USER\src) DEBUG PRINT(.\Out_File\zf_iic.lst) TABS(2) OBJECT(.\Out_File\zf_iic.obj) 
+
+stmt  level    source
+
+*** ERROR C318 OF ..\..\Libraries\seekfree_libraries\zf_iic.c: can't open file '..\..\Libraries\seekfree_libraries\zf_ii
+             -c.c'
+*** WARNING C500 IN LINE 1 OF ..\..\Libraries\seekfree_libraries\zf_iic.c:  LICENSE ERROR (R207(3): REGISTRY READ ERROR)
+             -
+
+
+C251 COMPILATION COMPLETE.  1 WARNING(S),  1 ERROR(S)

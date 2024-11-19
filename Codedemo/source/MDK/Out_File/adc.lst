@@ -1,0 +1,79 @@
+C251 COMPILER V5.60.0,  adc                                                                10/11/23  14:10:29  PAGE 1   
+
+
+C251 COMPILER V5.60.0, COMPILATION OF MODULE adc
+OBJECT MODULE PLACED IN .\Out_File\adc.obj
+COMPILER INVOKED BY: F:\keil\C251\BIN\C251.EXE F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_b
+                    -oard_example(2.5.2)\STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c XSMALL INTR2 WARNINGLEVE
+                    -L(3) BROWSE INCDIR(..\..\Libraries\libraries;..\..\Libraries\seekfree_libraries;..\..\Libraries\seekfree_peripheral;..\C
+                    -ODE;..\USER\inc;..\USER\src) DEBUG PRINT(.\Out_File\adc.lst) TABS(2) OBJECT(.\Out_File\adc.obj) 
+
+stmt  level    source
+
+*** WARNING C500 IN LINE 1 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.
+             -2)\STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c:  LICENSE ERROR (R207(3): REGISTRY READ E
+             -RROR)
+
+    1          #include "adc.h"
+*** ERROR C318 IN LINE 1 OF ..\USER\inc\adc.h: can't open file 'headfile.h'
+    2          
+    3          uint16 ad1_result,ad2_result;
+*** WARNING C34 IN LINE 3 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.2
+             -)\STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c: 'ad1_result': missing declaration specifi
+             -ers
+*** ERROR C42 IN LINE 3 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c: 'ad1_result': not in formal parameter list
+*** WARNING C34 IN LINE 3 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.2
+             -)\STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c: 'ad2_result': missing declaration specifi
+             -ers
+*** ERROR C42 IN LINE 3 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c: 'ad2_result': not in formal parameter list
+    4          uint32 temp1,temp2;
+*** WARNING C34 IN LINE 4 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.2
+             -)\STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c: 'uint32': missing declaration specifiers
+*** ERROR C42 IN LINE 4 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c: 'uint32': not in formal parameter list
+*** ERROR C25 IN LINE 4 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c: syntax error near 'temp1'
+*** WARNING C34 IN LINE 4 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.2
+             -)\STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c: 'temp1': missing declaration specifiers
+*** ERROR C42 IN LINE 4 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c: 'temp1': not in formal parameter list
+*** WARNING C34 IN LINE 4 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.2
+             -)\STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c: 'temp2': missing declaration specifiers
+*** ERROR C42 IN LINE 4 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c: 'temp2': not in formal parameter list
+    5          double adc1=0,adc2=0;
+*** ERROR C142 IN LINE 5 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.2)
+             -\STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c: illegal initialization
+*** ERROR C142 IN LINE 5 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.2)
+             -\STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c: illegal initialization
+    6          
+    7          void adc_detection(void)
+    8          {
+*** ERROR C42 IN LINE 8 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c: 'adc_detection': not in formal parameter li
+             -st
+*** ERROR C25 IN LINE 8 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c: syntax error near '{'
+    9            
+   10            ad1_result = adc_once(ADC_P01, ADC_12BIT);
+   11            temp1 = (((uint32)ad1_result * 5070) / 4096);  //¼ÆËã³öµ±Ç°adcÒý½ÅµÄµçÑ¹ ¼ÆËã¹«Ê½Îª ad_result*VCC/ADC·Ö±
+             -æÂÊ    VCCµ¥Î»Îªmv
+   12            adc1 =  (double)temp1 * 11/1000;//¸ù¾ÝÒý½ÅµçÑ¹  ºÍ·ÖÑ¹µç×èµÄ×èÖµ¼ÆËãµç³ØµçÑ¹ ¼ÆËã¹«Ë¾Îª   Òý½ÅµçÑ¹*(R2+R
+             -3)/R3   R3Îª½ÓµØ¶Ëµç×è
+   13          
+   14            ad2_result = adc_once(ADC_P00, ADC_12BIT);
+   15            temp2 = (((uint32)ad2_result * 5070) / 4096);  //¼ÆËã³öµ±Ç°adcÒý½ÅµÄµçÑ¹ ¼ÆËã¹«Ê½Îª ad_result*VCC/ADC·Ö±
+             -æÂÊ    VCCµ¥Î»Îªmv
+   16            adc2 =  (double)temp2 * 11/1000;//¸ù¾ÝÒý½ÅµçÑ¹  ºÍ·ÖÑ¹µç×èµÄ×èÖµ¼ÆËãµç³ØµçÑ¹ ¼ÆËã¹«Ë¾Îª   Òý½ÅµçÑ¹*(R2+R
+C251 COMPILER V5.60.0,  adc                                                                10/11/23  14:10:29  PAGE 2   
+
+             -3)/R3   R3Îª½ÓµØ¶Ëµç×è
+   17            
+   18            delay_ms(100);
+   19          }
+*** ERROR C7 IN LINE 19 OF F:\18½ìÖÇÄÜ³µ\stc32×ÊÁÏ\STC16FÖ÷°å×ÊÁÏ\V2.2°æ±¾×ÊÁÏ\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\adc.c: compilation aborted
+
+C251 COMPILATION COMPLETE.  6 WARNING(S),  12 ERROR(S)

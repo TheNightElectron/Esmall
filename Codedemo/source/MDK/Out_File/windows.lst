@@ -1,0 +1,120 @@
+C251 COMPILER V5.60.0,  windows                                                            10/11/23  14:10:29  PAGE 1   
+
+
+C251 COMPILER V5.60.0, COMPILATION OF MODULE windows
+OBJECT MODULE PLACED IN .\Out_File\windows.obj
+COMPILER INVOKED BY: F:\keil\C251\BIN\C251.EXE ..\USER\src\windows.c XSMALL INTR2 WARNINGLEVEL(3) BROWSE INCDIR(..\..\Li
+                    -braries\libraries;..\..\Libraries\seekfree_libraries;..\..\Libraries\seekfree_peripheral;..\CODE;..\USER\inc;..\USER\src
+                    -) DEBUG PRINT(.\Out_File\windows.lst) TABS(2) OBJECT(.\Out_File\windows.obj) 
+
+stmt  level    source
+
+*** WARNING C500 IN LINE 1 OF ..\USER\src\windows.c:  LICENSE ERROR (R207(3): REGISTRY READ ERROR)
+
+    1          #include "windows.h"
+*** ERROR C318 IN LINE 1 OF ..\USER\inc\windows.h: can't open file 'headfile.h'
+    2          
+    3          uint8 windows=0,pwm_choose=0;
+*** ERROR C142 IN LINE 3 OF ..\USER\src\windows.c: illegal initialization
+*** ERROR C142 IN LINE 3 OF ..\USER\src\windows.c: illegal initialization
+    4          extern uint8 windows_num,pwm_set_flag;
+*** ERROR C29 IN LINE 4 OF ..\USER\src\windows.c: formal/parameter has illegal storage class
+*** ERROR C33 IN LINE 4 OF ..\USER\src\windows.c: 'uint8': invalid storage class
+*** ERROR C25 IN LINE 4 OF ..\USER\src\windows.c: syntax error near 'windows_num'
+*** ERROR C33 IN LINE 4 OF ..\USER\src\windows.c: 'windows_num': invalid storage class
+*** ERROR C33 IN LINE 4 OF ..\USER\src\windows.c: 'pwm_set_flag': invalid storage class
+    5          extern int32 key_push;
+*** ERROR C29 IN LINE 5 OF ..\USER\src\windows.c: formal/parameter has illegal storage class
+*** ERROR C33 IN LINE 5 OF ..\USER\src\windows.c: 'int32': invalid storage class
+*** ERROR C25 IN LINE 5 OF ..\USER\src\windows.c: syntax error near 'key_push'
+*** ERROR C33 IN LINE 5 OF ..\USER\src\windows.c: 'key_push': invalid storage class
+    6          extern uint16 duty[4],hz[4];
+*** ERROR C29 IN LINE 6 OF ..\USER\src\windows.c: formal/parameter has illegal storage class
+*** ERROR C33 IN LINE 6 OF ..\USER\src\windows.c: 'uint16': invalid storage class
+*** ERROR C25 IN LINE 6 OF ..\USER\src\windows.c: syntax error near 'duty'
+*** ERROR C33 IN LINE 6 OF ..\USER\src\windows.c: 'duty': invalid storage class
+*** ERROR C33 IN LINE 6 OF ..\USER\src\windows.c: 'hz': invalid storage class
+    7          extern double adc1,adc2;
+*** ERROR C29 IN LINE 7 OF ..\USER\src\windows.c: formal/parameter has illegal storage class
+*** ERROR C33 IN LINE 7 OF ..\USER\src\windows.c: 'adc1': invalid storage class
+*** ERROR C33 IN LINE 7 OF ..\USER\src\windows.c: 'adc2': invalid storage class
+    8          
+    9          
+   10          void windows_start(void)
+   11          {
+*** ERROR C42 IN LINE 11 OF ..\USER\src\windows.c: 'windows_start': not in formal parameter list
+*** ERROR C25 IN LINE 11 OF ..\USER\src\windows.c: syntax error near '{'
+   12            OLED_Clear(OLED_CLEAR_BLACK);
+   13            OLED_ShowString(5,20,"ROMANCE",24,1);
+   14            OLED_ShowString(40,40,"never dies",16,1);
+   15            OLED_Refresh();
+   16            delay_ms(500);
+   17          }
+   18          void windows_menu(void)
+   19          {
+   20            OLED_Clear(OLED_CLEAR_BLACK);
+   21            OLED_ShowString(45,5,"PWM",24,1);
+   22            OLED_ShowString(45,32,"ADC",24,1);
+   23            if(key_push%2==0){OLED_ShowChar(30,9,96+' ',16,1);windows=11;}
+   24            else {OLED_ShowChar(30,36,96+' ',16,1);windows=12;}
+   25            OLED_Refresh();
+   26          }
+   27          void windows_pwm(void)
+   28          {
+   29            windows=2;
+   30            OLED_Clear(OLED_CLEAR_BLACK);
+   31            OLED_ShowString(16,5,"PWM1",24,1);
+   32            OLED_ShowString(80,5,"PWM2",24,1);
+   33            OLED_ShowString(16,32,"PWM3",24,1);
+   34            OLED_ShowString(80,32,"PWM4",24,1);
+C251 COMPILER V5.60.0,  windows                                                            10/11/23  14:10:29  PAGE 2   
+
+   35            if(key_push%4==0){OLED_ShowChar(4,9,96+' ',16,1);  pwm_choose=1;}
+   36            if(key_push%4==1||key_push%4==-1){OLED_ShowChar(68,9,96+' ',16,1); pwm_choose=2;}
+   37            if(key_push%4==2||key_push%4==-2){OLED_ShowChar(4,36,96+' ',16,1); pwm_choose=3;}
+   38            if(key_push%4==3||key_push%4==-3){OLED_ShowChar(68,36,96+' ',16,1);pwm_choose=4;}
+   39            OLED_Refresh();
+   40          }
+   41          void windows_adc(void)
+   42          {
+   43            OLED_Clear(OLED_CLEAR_BLACK);
+   44            adc_detection();
+   45            OLED_ShowString(16,5,"ADC1:",24,1);
+   46            OLED_ShowDouble(76,9,adc1,2,16,1);
+   47            OLED_ShowChar(110,5,'V',24,1);
+   48            OLED_ShowString(16,32,"ADC2:",24,1);
+   49            OLED_ShowDouble(76,36,adc2,2,16,1);
+   50            OLED_ShowChar(110,32,'V',24,1);
+   51            OLED_Refresh();
+   52          }
+   53          void windows_pwm_data(void)
+   54          {
+   55            OLED_Clear(OLED_CLEAR_BLACK);
+   56            OLED_ShowString(16,5,"HZ:",24,1);
+   57            OLED_ShowNum(52,9,hz[pwm_choose-1],5,16,1);
+   58            OLED_ShowString(98,5,"hz",24,1);
+   59            OLED_ShowString(16,32,"DUTY:",24,1);
+   60            OLED_ShowNum(76,36,duty[pwm_choose-1],3,16,1);
+   61            OLED_ShowChar(110,32,'%',24,1);
+   62            if(!pwm_set_flag)
+   63            {
+   64              if(key_push%2==0){OLED_ShowChar(4,9 ,96+' ',16,1);windows=21;}
+   65              else{OLED_ShowChar(4,36,96+' ',16,1);windows=22;}
+   66            }
+   67            pwm_start();
+   68            OLED_Refresh();
+   69          }
+   70          void windows_show(void)
+   71          {
+   72            switch(windows_num)
+   73            {
+   74              case 0:windows_menu();break;
+   75              case 1:windows_pwm();break;
+   76              case 2:windows_adc();break;
+   77              case 3:windows_pwm_data();break;
+   78              default:break;
+   79            }
+   80          }
+*** ERROR C7 IN LINE 80 OF ..\USER\src\windows.c: compilation aborted
+
+C251 COMPILATION COMPLETE.  1 WARNING(S),  23 ERROR(S)

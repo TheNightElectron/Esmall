@@ -1,0 +1,19 @@
+C251 COMPILER V5.60.0,  SEEKFREE_IPS114_SPI                                                10/11/23  14:10:28  PAGE 1   
+
+
+C251 COMPILER V5.60.0, COMPILATION OF MODULE SEEKFREE_IPS114_SPI
+OBJECT MODULE PLACED IN .\Out_File\SEEKFREE_IPS114_SPI.obj
+COMPILER INVOKED BY: F:\keil\C251\BIN\C251.EXE ..\..\Libraries\seekfree_peripheral\SEEKFREE_IPS114_SPI.c XSMALL INTR2 WA
+                    -RNINGLEVEL(3) BROWSE INCDIR(..\..\Libraries\libraries;..\..\Libraries\seekfree_libraries;..\..\Libraries\seekfree_periph
+                    -eral;..\CODE;..\USER\inc;..\USER\src) DEBUG PRINT(.\Out_File\SEEKFREE_IPS114_SPI.lst) TABS(2) OBJECT(.\Out_File\SEEKFREE
+                    -_IPS114_SPI.obj) 
+
+stmt  level    source
+
+*** ERROR C318 OF ..\..\Libraries\seekfree_peripheral\SEEKFREE_IPS114_SPI.c: can't open file '..\..\Libraries\seekfree_p
+             -eripheral\SEEKFREE_IPS114_SPI.c'
+*** WARNING C500 IN LINE 1 OF ..\..\Libraries\seekfree_peripheral\SEEKFREE_IPS114_SPI.c:  LICENSE ERROR (R207(3): REGIST
+             -RY READ ERROR)
+
+
+C251 COMPILATION COMPLETE.  1 WARNING(S),  1 ERROR(S)

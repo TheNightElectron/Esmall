@@ -1,0 +1,127 @@
+C251 COMPILER V5.60.0,  key                                                                10/11/23  14:10:29  PAGE 1   
+
+
+C251 COMPILER V5.60.0, COMPILATION OF MODULE key
+OBJECT MODULE PLACED IN .\Out_File\key.obj
+COMPILER INVOKED BY: F:\keil\C251\BIN\C251.EXE ..\USER\src\key.c XSMALL INTR2 WARNINGLEVEL(3) BROWSE INCDIR(..\..\Librar
+                    -ies\libraries;..\..\Libraries\seekfree_libraries;..\..\Libraries\seekfree_peripheral;..\CODE;..\USER\inc;..\USER\src) DE
+                    -BUG PRINT(.\Out_File\key.lst) TABS(2) OBJECT(.\Out_File\key.obj) 
+
+stmt  level    source
+
+*** WARNING C500 IN LINE 1 OF ..\USER\src\key.c:  LICENSE ERROR (R207(3): REGISTRY READ ERROR)
+
+    1          #include "key.h"
+*** ERROR C318 IN LINE 1 OF ..\USER\inc\key.h: can't open file 'headfile.h'
+    2            
+    3          typedef enum {
+    4            key_normal,
+    5            key_press,
+    6            key_reless
+    7          }KEY_STATE;
+    8          
+    9          KEY_STATE key_state=key_normal;
+   10          
+   11          uint8 key_push_flag=0,key_value=0,key_push_a_time_flag=0,key_push_b_time_flag=0,key_push_c_time_flag=0,
+*** ERROR C142 IN LINE 11 OF ..\USER\src\key.c: illegal initialization
+*** ERROR C142 IN LINE 11 OF ..\USER\src\key.c: illegal initialization
+*** ERROR C142 IN LINE 11 OF ..\USER\src\key.c: illegal initialization
+*** ERROR C142 IN LINE 11 OF ..\USER\src\key.c: illegal initialization
+*** ERROR C142 IN LINE 11 OF ..\USER\src\key.c: illegal initialization
+   12                windows_num=0,
+*** ERROR C142 IN LINE 12 OF ..\USER\src\key.c: illegal initialization
+   13                pwm_set_flag=0;
+*** ERROR C142 IN LINE 13 OF ..\USER\src\key.c: illegal initialization
+   14          int32 key_push=0;
+*** WARNING C34 IN LINE 14 OF ..\USER\src\key.c: 'int32': missing declaration specifiers
+*** ERROR C42 IN LINE 14 OF ..\USER\src\key.c: 'int32': not in formal parameter list
+*** ERROR C25 IN LINE 14 OF ..\USER\src\key.c: syntax error near 'key_push'
+*** ERROR C142 IN LINE 14 OF ..\USER\src\key.c: illegal initialization
+   15          uint32 key_push_time_a=0,key_push_time_b=0,key_push_time_c=0;
+*** WARNING C34 IN LINE 15 OF ..\USER\src\key.c: 'uint32': missing declaration specifiers
+*** ERROR C42 IN LINE 15 OF ..\USER\src\key.c: 'uint32': not in formal parameter list
+*** ERROR C25 IN LINE 15 OF ..\USER\src\key.c: syntax error near 'key_push_time_a'
+*** ERROR C142 IN LINE 15 OF ..\USER\src\key.c: illegal initialization
+*** ERROR C142 IN LINE 15 OF ..\USER\src\key.c: illegal initialization
+*** ERROR C142 IN LINE 15 OF ..\USER\src\key.c: illegal initialization
+   16          
+   17          extern uint8 windows,pwm_set_data;
+*** ERROR C29 IN LINE 17 OF ..\USER\src\key.c: formal/parameter has illegal storage class
+*** ERROR C33 IN LINE 17 OF ..\USER\src\key.c: 'uint8': invalid storage class
+*** ERROR C25 IN LINE 17 OF ..\USER\src\key.c: syntax error near 'windows'
+*** ERROR C33 IN LINE 17 OF ..\USER\src\key.c: 'windows': invalid storage class
+*** ERROR C33 IN LINE 17 OF ..\USER\src\key.c: 'pwm_set_data': invalid storage class
+   18          
+   19          void key_scan(void)
+   20          {
+*** ERROR C42 IN LINE 20 OF ..\USER\src\key.c: 'key_scan': not in formal parameter list
+*** ERROR C25 IN LINE 20 OF ..\USER\src\key.c: syntax error near '{'
+   21            switch(key_state)
+   22            {
+   23              case key_normal:{
+   24                if(!key_a||!key_b||!key_c)key_state=key_press;
+   25              }break;
+   26              case key_press:{
+   27                if(!key_c){key_state=key_reless;key_value=3;}
+   28                if(!key_b){key_state=key_reless;key_value=2;}
+   29                if(!key_a){key_state=key_reless;key_value=1;}
+   30              }break;
+   31              case key_reless:{
+C251 COMPILER V5.60.0,  key                                                                10/11/23  14:10:29  PAGE 2   
+
+   32                if(!key_a){key_push_time_a+=10;if(key_push_time_a>=500){key_push_a_time_flag=1;key_push_time_a=0;}}
+   33                else if(!key_b){key_push_time_b+=10;if(key_push_time_b>=500){key_push_b_time_flag=1;key_push_time_b=0;
+             -}}
+   34                else if(!key_c){key_push_time_c+=10;if(key_push_time_c>=500){key_push_c_time_flag=1;key_push_time_c=0;
+             -}}
+   35                else{key_state=key_normal;key_push_flag=1;key_push_time_a=0;key_push_time_b=0;key_push_time_c=0;}
+   36              }break;
+   37              default:break;
+   38            }
+   39          }
+   40          
+   41          void key_work(void)
+   42          {
+   43            if(key_push_flag)
+   44            {
+   45              switch(key_value)
+   46              {
+   47                case 1:{key_push-=1;}break;
+   48                case 2:{
+   49                  if(!key_push_b_time_flag)
+   50                  {
+   51                    if(pwm_set_flag){pwm_set_flag=0;windows=0;}
+   52                    switch(windows)
+   53                    {
+   54                      case 11: windows_num=1;break;
+   55                      case 12: windows_num=2;break;
+   56                      case  2: windows_num=3;break;
+   57                      case 21:pwm_set_flag=1;break;
+   58                      case 22:pwm_set_flag=2;break;
+   59                      default:break;
+   60                    }
+   61                    key_push=0;
+   62                  }
+   63                  else{
+   64                    switch(windows)
+   65                    {
+   66                      case 12:windows_num=0;break;
+   67                      case  2:windows_num=0;break;
+   68                      case 21:windows_num=1;break;
+   69                      case 22:windows_num=1;break;
+   70                      default:break;
+   71                    }
+   72                  }
+   73                }break;
+   74                case 3:{key_push+=1;}break;
+   75                default:break;
+   76              }
+   77              key_value=0;
+   78              key_push_flag=0;
+   79              key_push_b_time_flag=0;
+   80            }
+   81            windows_show();
+   82          }
+*** ERROR C7 IN LINE 82 OF ..\USER\src\key.c: compilation aborted
+
+C251 COMPILATION COMPLETE.  3 WARNING(S),  24 ERROR(S)

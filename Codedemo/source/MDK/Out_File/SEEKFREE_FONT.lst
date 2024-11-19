@@ -1,0 +1,18 @@
+C251 COMPILER V5.60.0,  SEEKFREE_FONT                                                      10/11/23  14:10:28  PAGE 1   
+
+
+C251 COMPILER V5.60.0, COMPILATION OF MODULE SEEKFREE_FONT
+OBJECT MODULE PLACED IN .\Out_File\SEEKFREE_FONT.obj
+COMPILER INVOKED BY: F:\keil\C251\BIN\C251.EXE ..\..\Libraries\seekfree_peripheral\SEEKFREE_FONT.c XSMALL INTR2 WARNINGL
+                    -EVEL(3) BROWSE INCDIR(..\..\Libraries\libraries;..\..\Libraries\seekfree_libraries;..\..\Libraries\seekfree_peripheral;.
+                    -.\CODE;..\USER\inc;..\USER\src) DEBUG PRINT(.\Out_File\SEEKFREE_FONT.lst) TABS(2) OBJECT(.\Out_File\SEEKFREE_FONT.obj) 
+
+stmt  level    source
+
+*** ERROR C318 OF ..\..\Libraries\seekfree_peripheral\SEEKFREE_FONT.c: can't open file '..\..\Libraries\seekfree_periphe
+             -ral\SEEKFREE_FONT.c'
+*** WARNING C500 IN LINE 1 OF ..\..\Libraries\seekfree_peripheral\SEEKFREE_FONT.c:  LICENSE ERROR (R207(3): REGISTRY REA
+             -D ERROR)
+
+
+C251 COMPILATION COMPLETE.  1 WARNING(S),  1 ERROR(S)
