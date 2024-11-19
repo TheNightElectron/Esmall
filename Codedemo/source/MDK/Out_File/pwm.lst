@@ -1,0 +1,99 @@
+C251 COMPILER V5.60.0,  pwm                                                                10/11/23  14:10:29  PAGE 1   
+
+
+C251 COMPILER V5.60.0, COMPILATION OF MODULE pwm
+OBJECT MODULE PLACED IN .\Out_File\pwm.obj
+COMPILER INVOKED BY: F:\keil\C251\BIN\C251.EXE F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_b
+                    -oard_example(2.5.2)\STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c XSMALL INTR2 WARNINGLEVE
+                    -L(3) BROWSE INCDIR(..\..\Libraries\libraries;..\..\Libraries\seekfree_libraries;..\..\Libraries\seekfree_peripheral;..\C
+                    -ODE;..\USER\inc;..\USER\src) DEBUG PRINT(.\Out_File\pwm.lst) TABS(2) OBJECT(.\Out_File\pwm.obj) 
+
+stmt  level    source
+
+*** WARNING C500 IN LINE 1 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.
+             -2)\STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c:  LICENSE ERROR (R207(3): REGISTRY READ E
+             -RROR)
+
+    1          #include "pwm.h"
+*** ERROR C318 IN LINE 1 OF ..\USER\inc\pwm.h: can't open file 'headfile.h'
+    2          
+    3          uint16 duty[4]={0,0,0,0},hz[4]={0,0,0,0};
+*** ERROR C142 IN LINE 3 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.2)
+             -\STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c: illegal initialization
+*** ERROR C142 IN LINE 3 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.2)
+             -\STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c: illegal initialization
+    4          extern uint8 pwm_choose,pwm_set_flag,key_push_a_time_flag,key_push_c_time_flag;
+*** ERROR C29 IN LINE 4 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c: formal/parameter has illegal storage class
+*** ERROR C33 IN LINE 4 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c: 'uint8': invalid storage class
+*** ERROR C25 IN LINE 4 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c: syntax error near 'pwm_choose'
+*** ERROR C33 IN LINE 4 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c: 'pwm_choose': invalid storage class
+*** ERROR C33 IN LINE 4 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c: 'pwm_set_flag': invalid storage class
+*** ERROR C33 IN LINE 4 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c: 'key_push_a_time_flag': invalid storage cla
+             -ss
+*** ERROR C33 IN LINE 4 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c: 'key_push_c_time_flag': invalid storage cla
+             -ss
+    5          extern int32 key_push;
+*** ERROR C29 IN LINE 5 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c: formal/parameter has illegal storage class
+*** ERROR C33 IN LINE 5 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c: 'int32': invalid storage class
+*** ERROR C25 IN LINE 5 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c: syntax error near 'key_push'
+*** ERROR C33 IN LINE 5 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c: 'key_push': invalid storage class
+    6          
+    7          void pwm_start(void)
+    8          {
+*** ERROR C42 IN LINE 8 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c: 'pwm_start': not in formal parameter list
+*** ERROR C25 IN LINE 8 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c: syntax error near '{'
+    9            if(key_push_a_time_flag)key_push-=10;
+   10            if(key_push_c_time_flag)key_push+=10;
+   11            key_push_a_time_flag=0;
+   12            key_push_c_time_flag=0;
+   13            if(pwm_set_flag==1)
+   14            {
+   15              //key_rotate=hz[pwm_choose-1];
+   16              if(key_push>=3000000)key_push=3000000;
+   17              if(key_push<=1)key_push=1;
+   18              hz[pwm_choose-1]=key_push*10;
+   19            }
+   20            if(pwm_set_flag==2)
+C251 COMPILER V5.60.0,  pwm                                                                10/11/23  14:10:29  PAGE 2   
+
+   21            {
+   22              //key_rotate=duty[pwm_choose-1];
+   23              if(key_push>=100)key_push=100;
+   24              if(key_push<=0)key_push=0;
+   25              duty[pwm_choose-1]=key_push;
+   26            }
+   27            switch(pwm_choose)//duty_set
+   28            {
+   29              case 1:{pwm_freq(PWMA_CH3P_P24,hz[0],duty[0]*100);}break;
+   30              case 2:{pwm_freq(PWMB_CH2_P21 ,hz[1],duty[1]*100);}break;
+   31              case 3:{pwm_freq(PWMB_CH1_P20 ,hz[2],duty[2]*100);}break;
+   32              case 4:{pwm_freq(PWMA_CH4P_P34,hz[3],duty[3]*100);}break;
+   33              default:break;
+   34            }
+   35          //    pwm_duty(PWMA_CH1P_P10,duty[0]*100);
+   36          //    pwm_duty(PWMA_CH4P_P16,duty[1]*100);
+   37          //    pwm_duty(PWMB_CH1_P17 ,duty[2]*100);
+   38          //    pwm_duty(PWMB_CH3_P33 ,duty[3]*100);
+   39          //  pwm_freq(PWMA_CH1P_P10,hz[0],duty[0]*100);
+   40          //  pwm_freq(PWMA_CH4P_P16,hz[1],duty[1]*100);
+   41          //  pwm_freq(PWMB_CH1_P17 ,hz[2],duty[2]*100);
+   42          //  pwm_freq(PWMB_CH3_P33 ,hz[3],duty[3]*100);
+   43            delay_ms(100);
+   44          }
+*** ERROR C7 IN LINE 44 OF F:\18届智能车\stc32资料\STC16F主板资料\V2.2版本资料\STC32G12K128_mother_board_example(2.5.2)\
+             -STC32G12K128_mother_board_example(2.5.2)\3-OLED Display Demo\USER\src\pwm.c: compilation aborted
+
+C251 COMPILATION COMPLETE.  1 WARNING(S),  17 ERROR(S)
